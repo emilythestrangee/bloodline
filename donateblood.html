@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Blood</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+            margin: 0;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #a00;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            background-color: #1a1a1a;
+            padding: 70px;
+            margin: 20px auto;
+            border-radius: 8px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3a3a3a;
+            color: white;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .btn {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #c8102e;
+            color: white;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container1 {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .text-section {
+            flex: 2;
+            padding: 20px;
+        }
+
+        p,
+        ul {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .donate-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .donate-button:hover {
+            background-color: rgb(255, 255, 255);
+            color:black;
+        }
+
+
+        h2 {
+            color: #550000;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: rgb(255, 255, 255);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgb(9, 9, 9);
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: #020202;
+            color: white;
+            font-size: 18px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            font-size: 16px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #555;
+            padding-bottom: 100px;
+        }
+
+        .custom-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .custom-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Donate Blood</h1>
+        <h3>Save life by donating blood today</h3>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="donateblood.html">Donate Blood</a>
+        <a href="donatemoney.html">Donate Money</a>
+        <a href="findablooddrive.html">Find a Blood Drive</a>
+        <a href="hostablooddrive.html">Host a Blood Drive</a>
+        <a href="needblood.html">Need Blood</a>
+    </nav>
+
+    <div class="container" id="schedule">
+        <h1>SCHEDULE AN APPOINTMENT</h1>
+        <form id="appointmentForm">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="phone" placeholder="Phone (8 digits or 123-456-7890)" pattern="^\d{8}$|^\d{3}-\d{3}-\d{4}$" required>
+                <input type="text" id="bloodType" placeholder="Blood Type (e.g., A+, O-)" pattern="^(A|B|AB|O)[+-]$" required>
+            </div>
+            <textarea id="info" placeholder="Any other information..."></textarea>
+            <button type="submit" class="btn">Schedule an Appointment</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const bloodType = document.getElementById("bloodType").value.trim();
+
+            if (name === "" || email === "" || phone === "" || bloodType === "") {
+                alert("All fields except additional information are required.");
+                event.preventDefault();
+                return;
+            }
+            
+            const phonePattern = /^\d{8}$|^\d{3}-\d{3}-\d{4}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid phone number (8 digits like 36180365 or 123-456-7890).");
+                event.preventDefault();
+                return;
+            }
+            
+            const bloodPattern = /^(A|B|AB|O)[+-]$/;
+            if (!bloodPattern.test(bloodType)) {
+                alert("Please enter a valid blood type (A+, A-, B+, B-, AB+, AB-, O+, O-).");
+                event.preventDefault();
+                return;
+            }
+            
+            alert("Appointment scheduled successfully!");
+        });
+    </script>    
+    
+    <h1> Step-by-Step Guide to Donating Blood</h1>
+
+    <div class="steps-container">
+        <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-title">Check Your Eligibility</div>
+            <div class="step-description">
+                Confirm you meet the eligibility requirements to donate blood, such as age, weight, and overall health.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-title">Schedule An Appointment</div>
+            <div class="step-description">
+                Schedule an appointment at a blood bank or blood drive near you.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-title">Donate Blood</div>
+            <div class="step-description">
+                Arrive at the appointment, fill out a questionnaire, and donate blood. The process takes about 10-15
+                minutes.
+            </div>
+        </div>
+    </div>
+
+    <div
+        style="position: relative; background-image: url('pics/blood.jpg'); background-size: cover; background-position: center; padding: 40px; color: white;">
+        <div style="background-color: rgba(0, 0, 0, 0.628); padding: 50px; border-radius: 10px;">
+            <h1 style="text-align: center; font-size: 48px;">Eligibility Criteria</h1>
+            <ul style="font-size: 24px;" type="circle">
+                <li
+                    style="padding-bottom: 20px; list-style-type: circle; font-size: 24px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    18-50 years, above 50 Kg.</li>
+                <li
+                    style="padding-bottom: 20px; list-style-type: circle; font-size: 24px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    Normal temperature, pulse and blood pressure.</li>
+                <li
+                    style="padding-bottom: 20px; list-style-type: circle; font-size: 24px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    No Respiratory Diseases</li>
+                <li
+                    style="padding-bottom: 20px; list-style-type: circle; font-size: 24px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    Above 12.5 g/dL Hemoglobin</li>
+                <li
+                    style="padding-bottom: 20px; list-style-type: circle; font-size: 24px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    No skin disease, puncture or scars</li>
+                <li
+                    style="list-style-type: circle; font-size: 24px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    No history of transmissible disease</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container1">
+        <div class="image-section">
+            <img src="pics/donateblood.jpg" alt="Blood Samples" />
+        </div>
+        <div class="text-section">
+            <h1>Donate Blood Today</h1>
+            <h2>Why Should You Donate Blood?</h2>
+            <p>
+                Donating blood is a selfless act that has the power to save lives. Here are a few reasons why you should
+                consider donating blood:
+            </p>
+            <ul>
+                <li>You could help save up to three lives with just one donation.</li>
+                <li>Blood is always needed in emergency situations, such as natural disasters and accidents.</li>
+                <li>Blood is needed for patients undergoing surgeries, cancer treatment, and other medical procedures.
+                </li>
+                <li>Blood cannot be manufactured, which means that the only source of blood is through donations from
+                    volunteers.</li>
+                <li>Donating blood can also have health benefits for the donor, such as reducing the risk of heart
+                    disease and cancer.</li>
+            </ul>
+            <br>
+            <a href="#schedule" class="donate-button">Donate Now</a>
+        </div>
+    </div>
+    <div style="text-align: center; padding-top: 50px; padding-bottom: 50px;">
+        <img src="pics/quote.png" style="border-radius:15px; width:50%; height:40%; align-items: center;">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ,All Rights Reserved, BloodLine.</p>
+    </footer>
+</body>
+
+</html>

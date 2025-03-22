@@ -1,0 +1,377 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Blood</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+            margin: 0;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #a00;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            background-color: #1a1a1a;
+            padding: 70px;
+            margin: 20px auto;
+            border-radius: 8px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3a3a3a;
+            color: white;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .btn {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #c8102e;
+            color: white;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container1 {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .text-section {
+            flex: 2;
+            padding: 20px;
+        }
+
+        p,
+        ul {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .donate-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .donate-button:hover {
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+
+
+        h2 {
+            color: #550000;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: rgb(255, 255, 255);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgb(9, 9, 9);
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: #020202;
+            color: white;
+            font-size: 18px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            font-size: 16px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #555;
+            padding-bottom: 100px;
+        }
+
+        .dropdown {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .table-container {
+            display: none;
+            /* Hide table initially */
+            margin: 20px auto;
+            max-width: 600px;
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #c8102e;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Need blood?</h2>
+        <h1>Your Blood Needs Are Our Priority.</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="donateblood.html">Donate Blood</a>
+        <a href="donatemoney.html">Donate Money</a>
+        <a href="findablooddrive.html">Find a Blood Drive</a>
+        <a href="hostablooddrive.html">Host a Blood Drive</a>
+        <a href="needblood.html">Need Blood</a>
+    </nav>
+
+    <div class="container" id="request">
+        <h1>REQUEST FOR EMERGENCY BLOOD</h1>
+        <form id="requestForm">
+            <div class="input-group">
+                <input type="text" id="reqName" placeholder="Name" required>
+                <input type="email" id="reqEmail" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="reqPhone" placeholder="Phone (8 digits or 123-456-7890)"
+                    pattern="^\d{8}$|^\d{3}-\d{3}-\d{4}$" required>
+                <input type="text" id="reqBloodType" placeholder="Blood Type (A, B, AB, O with +/-)"
+                    pattern="^(A|B|AB|O)[+-]$" title="Enter a valid blood type (A+, A-, B+, B-, AB+, AB-, O+, O-)"
+                    required>
+            </div>
+            <textarea id="reqInfo" placeholder="Any other information..."></textarea>
+            <button type="submit" class="btn">Request Blood</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("requestForm").addEventListener("submit", function (event) {
+            const name = document.getElementById("reqName").value.trim();
+            const email = document.getElementById("reqEmail").value.trim();
+            const phone = document.getElementById("reqPhone").value.trim();
+            const bloodType = document.getElementById("reqBloodType").value.trim();
+    
+            if (!name || !email || !phone || !bloodType) {
+                alert("Please fill in all required fields.");
+                event.preventDefault();
+                return;
+            }
+
+            const phonePattern = /^\d{8}$|^\d{3}-\d{3}-\d{4}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid phone number (8 digits like 36180365 or 123-456-7890).");
+                event.preventDefault();
+                return;
+            }
+    
+            const bloodTypePattern = /^(A|B|AB|O)[+-]$/;
+            if (!bloodTypePattern.test(bloodType)) {
+                alert("Please enter a valid blood type (A+, A-, B+, B-, AB+, AB-, O+, O-).");
+                event.preventDefault();
+                return;
+            }
+    
+            alert("Request Sent Successfully!");
+        });
+    </script>
+
+
+    <div class="dropdown">
+        <h2>Find Available Blood Stock</h2>
+        <select id="bloodTypeSelect" onchange="searchBlood()">
+            <option value="">-Select Blood Group-</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+        <button onclick="searchBlood()">Search Availability</button>
+    </div>
+
+    <table id="availabilityTable" class="table-container">
+        <thead>
+            <tr>
+                <th>Blood Group</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        function searchBlood() {
+            const bloodType = document.getElementById("bloodTypeSelect").value;
+            const tableBody = document.querySelector("#availabilityTable tbody");
+
+            tableBody.innerHTML = "";
+
+            const availabilityData = {
+                "A+": Math.random() < 0.5 ? "Available" : "Not Available",
+                "A-": Math.random() < 0.5 ? "Available" : "Not Available",
+                "B+": Math.random() < 0.5 ? "Available" : "Not Available",
+                "B-": Math.random() < 0.5 ? "Available" : "Not Available",
+                "AB+": Math.random() < 0.5 ? "Available" : "Not Available",
+                "AB-": Math.random() < 0.5 ? "Available" : "Not Available",
+                "O+": Math.random() < 0.5 ? "Available" : "Not Available",
+                "O-": Math.random() < 0.5 ? "Available" : "Not Available"
+            };
+
+            if (bloodType) {
+                const status = availabilityData[bloodType];
+                tableBody.innerHTML += `<tr><td>${bloodType}</td><td>${status}</td></tr>`;
+                document.getElementById('availabilityTable').style.display = 'table'; // Show table on selection
+            } else {
+                alert("Please select a blood type.");
+                document.getElementById('availabilityTable').style.display = 'none'; // Hide if no selection
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2025 ,All Rights Reserved, BloodLine.</p>
+    </footer>
+</body>
+
+</html>

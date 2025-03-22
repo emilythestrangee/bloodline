@@ -1,0 +1,333 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host a Blood Drive</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+            margin: 0;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #a00;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            flex: 1;
+            /* Pushes the footer to the bottom */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #1a1a1a;
+            padding: 60px;
+            margin: 20px auto;
+            border-radius: 8px;
+            width: 70%;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: rgb(255, 255, 255);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgb(9, 9, 9);
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: #020202;
+            color: white;
+            font-size: 18px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        
+        .step-description {
+            font-size: 16px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #555;
+            padding-bottom: 100px;
+        }
+
+        .text-section {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .container1 {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            margin-bottom: 100px;
+            flex-wrap: wrap;
+        }
+
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #550000;
+            text-transform: uppercase;
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .image-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3a3a3a;
+            color: white;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .host-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .host-button:hover {
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #c8102e;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h3
+            style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            Join us to save lives</h3>
+        <h1>Host a Blood Drive To <br>Save Lives With Us</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="donateblood.html">Donate Blood</a>
+        <a href="donatemoney.html">Donate Money</a>
+        <a href="findablooddrive.html">Find a Blood Drive</a>
+        <a href="hostablooddrive.html">Host a Blood Drive</a>
+        <a href="needblood.html">Need Blood</a>
+    </nav>
+
+    <div class="container" id="host">
+        <h1>HOST A BLOOD DRIVE</h1>
+        <form id="hostForm">
+            <div class="input-group">
+                <input type="text" id="hostName" placeholder="Name" required>
+                <input type="email" id="hostEmail" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="hostPhone" placeholder="Phone (8 digits or 123-456-7890)" pattern="^\d{8}$|^\d{3}-\d{3}-\d{4}$" required>
+                <input type="text" id="hostInstitute" placeholder="Institute" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="hostDesignation" placeholder="Designation" required>
+                <input type="text" id="hostCity" placeholder="City" required>
+            </div>
+            <textarea id="hostInfo" placeholder="Any other information..."></textarea>
+            <button type="submit" class="btn">Schedule Event</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("hostForm").addEventListener("submit", function(event) {
+            const name = document.getElementById("hostName").value.trim();
+            const email = document.getElementById("hostEmail").value.trim();
+            const phone = document.getElementById("hostPhone").value.trim();
+            const institute = document.getElementById("hostInstitute").value.trim();
+            const designation = document.getElementById("hostDesignation").value.trim();
+            const city = document.getElementById("hostCity").value.trim();
+    
+            if (!name || !email || !phone || !institute || !designation || !city) {
+                alert("All fields except additional information are required.");
+                event.preventDefault();
+                return;
+            }
+    
+            const phonePattern = /^\d{8}$|^\d{3}-\d{3}-\d{4}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid phone number (8 digits like 36180365 or 123-456-7890).");
+                event.preventDefault();
+                return;
+            }
+    
+            alert("Blood drive scheduled successfully!");
+        });
+    </script>
+
+    <h1
+        style="padding:10px; text-shadow: none; color:black; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+        Promoting Your Blood Drive</h1>
+
+    <div class="steps-container">
+        <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-title">Promote Widely</div>
+            <div class="step-description">
+                Use social media, flyers, and emails to spread the word.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-title">Emphasize Benefits</div>
+            <div class="step-description">
+                Highlight the positive impact donors can make.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-title">Variety of Channels</div>
+            <div class="step-description">
+                Use multiple marketing channels to reach potential donors.
+            </div>
+        </div>
+    </div>
+
+    <div class="container1" style="padding-bottom:50px;">
+        <div class="image-section">
+            <img src="pics/heart.jpg" alt="Blood Samples" />
+        </div>
+        <div class="text-section">
+            <h2>Benefits of Hosting a Blood Drive</h2>
+            <p>
+                Hosting a blood drive is a great way to give back to your community and help save lives. By providing a
+                convenient location for people to donate, you can help ensure that there is a steady supply of blood for
+                those in need. Blood drives also provide an opportunity for team building and community involvement, and
+                can boost morale and engagement among employees or group members.
+            </p>
+            <br>
+            <a href="#host" class="host-button"
+                style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Host
+                Now</a>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding-top: 50px; padding-bottom: 50px;">
+        <img src="pics/quote2.png" style="border-radius:15px; width:80%; height:40%; align-items: center;">
+    </div>
+
+    <footer>
+        <p>&copy; 2025, All Rights Reserved, BloodLine.</p>
+    </footer>
+
+</body>
+
+</html>

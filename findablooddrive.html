@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Blood Drive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #a00;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: #550000;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            margin: 20px auto;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #550000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #770000;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 80%;
+            height: 450px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #c8102e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Find a Blood Drive</h1>
+        <h1>Search for a Blood Donation Center Near You</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="donateblood.html">Donate Blood</a>
+        <a href="donatemoney.html">Donate Money</a>
+        <a href="findablooddrive.html">Find a Blood Drive</a>
+        <a href="hostablooddrive.html">Host a Blood Drive</a>
+        <a href="needblood.html">Need Blood</a>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" id="locationInput" placeholder="Enter ZIP code or City">
+        <button onclick="updateMap()">Search</button>
+    </div>
+
+    <div class="map-container">
+        <iframe id="mapFrame" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14317.980215171661!2d50.552889055419925!3d26.213099400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49af14a43dab1f%3A0x60ef985f88f77bfe!2sRoyal%20Bahrain%20Hospital!5e0!3m2!1sen!2sbh!4v1742643859250!5m2!1sen!2sbh" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <script>
+        function updateMap() {
+            let location = document.getElementById("locationInput").value;
+            if (location) {
+                let mapFrame = document.getElementById("mapFrame");
+                let newSrc = "https://www.google.com/maps/embed/v1/place?q=" + encodeURIComponent(location) + "&key=YOUR_GOOGLE_MAPS_EMBED_API_KEY";
+                mapFrame.src = newSrc;
+            }
+        }
+    </script>
+
+    <div style="text-align: center; padding-bottom:50px;">
+        <p><em>"The gift of blood is the gift of life. There is no substitute for human blood." – Anonymous</em></p>
+    </div>
+    <footer>
+        <p>&copy; 2025 ,All Rights Reserved, BloodLine.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodLine</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-image: url('pics/homepage.jpg'); /* Set the background image for the body */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the background image */
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: rgb(255, 255, 255);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgb(9, 9, 9);
+        }
+        header {
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 17px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            position: relative;
+            height: 400px;
+            display: flex; /* Make this a flex container */
+            justify-content: center; /* Center child elements horizontally */
+            align-items: center; /* Center child elements vertically */
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.404);
+        }
+        .hero h1 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 36px;
+            font-weight: bolder;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.58);
+        }
+        .content {
+            flex: 1; /* Pushes the footer down */
+            padding: 20px;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: left;
+            flex: 1;
+            padding-bottom:0px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%; /* Placeholder for card image */
+            border-radius: 10px;
+        }
+        .card img :hover{
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.404);
+        }
+        .card p {
+            color: gray;
+        }
+        .button {
+            background-color: #c8102e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: #020202;
+            color: white;
+            font-size: 18px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            font-size: 16px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #555;
+            padding-bottom: 100px;
+        }
+
+        h2 {
+            color: #550000;
+            text-transform: uppercase;
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #c8102e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="overlay">
+        <h1>BloodLine</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="donateblood.html">Donate Blood</a>
+            <a href="donatemoney.html">Donate Money</a>
+            <a href="findablooddrive.html">Find a Blood Drive</a>
+            <a href="hostablooddrive.html">Host a Blood Drive</a>
+            <a href="needblood.html">Need Blood</a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <div class="hero">
+            <div class="overlay"></div>
+            <h1>Your Blood Can Make a Difference</h1>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <img src="pics/donateblood2.jpg" alt="Donate Blood At HemoCell" style="height:60%;"> <!-- Placeholder for image -->
+                <h2>Save a Life Today</h2>
+                <p>Donate Blood At BloodLine</p>
+                <a href="donateblood.html"><button class="button">Donate blood</button></a>
+            </div>
+            <div class="card">
+                <img src="pics/heart.jpg" alt="Request For Blood Donation"> <!-- Placeholder for image -->
+                <h2>Urgent Need For Blood</h2>
+                <p>Request For Blood Donation</p>
+                <a href="needblood.html"><button class="button">Request blood</button></a>
+            </div>
+        </div>
+    </div>
+
+    <h1><center> Step-by-Step Guide to Donating Blood</center></h1>
+
+    <div class="steps-container">
+        <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-title">Check Your Eligibility</div>
+            <div class="step-description">
+                Confirm you meet the eligibility requirements to donate blood, such as age, weight, and overall health.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-title">Schedule An Appointment</div>
+            <div class="step-description">
+                Schedule an appointment at a blood bank or blood drive near you.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-title">Donate Blood</div>
+            <div class="step-description">
+                Arrive at the appointment, fill out a questionnaire, and donate blood. The process takes about 10-15
+                minutes.
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding-top: 50px; padding-bottom: 50px;">
+        <img src="pics/quote3.png" style="border-radius:15px; width:80%; height:90%; align-items: center;">
+    </div>
+
+    <footer>
+        <p>&copy; 2025, All Rights Reserved, BloodLine.</p>
+    </footer>
+</body>
+</html>
